@@ -1,0 +1,28 @@
+p{
+    background-color: red;
+}
+
+h1{
+    color:pink;
+}
+.stylepink{
+    color:pink;
+}
+.article{
+    color:blue;
+}
+.style1{
+    background-color: aqua;
+}
+/* #div1{
+    color:aliceblue;
+} */
+ div h1{
+    color:gray;
+ }
+ div > h4{
+    color:green;
+ }
+ div + h4{
+    color:blue;
+ }
