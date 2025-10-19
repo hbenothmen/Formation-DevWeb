@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+a:hover{
+    color:red;
+    background-color: rgb(208, 127, 255);
+}
+input:focus{
+    color:green;
+    background-color:red;
+}
+button:active{
+    color:blue;
+    background-color:pink;
+}
+p:first-child{
+    color:blue;
+}
+li:first-child{
+    color:blue;
+}
+li:nth-child(2){
+    color:red;
+}
+li:nth-child(3){
+    color:green;
+}
+p::first-letter{
+    color:blue;
+    font-size: 30px;
+}
+p::first-line{
+    
+    font-size: 30px;
+font-family:'Courier New', Courier, monospace;
+}
+p::before{
+    content:"OK";
+    color:brown;
+}
+p::after{
+    content:"OK";
+    color:pink;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <a href="#">Click</a>
+  <input type="text">
+  <button>Envoyer</button>
+  <p>Formulaire de création de profil</p>
+  <ol>liste des elements
+  <li>element1</li>
+  <li>element2</li>
+  <li>element3</li>
+  <p>Un formulaire de création de profil est un modèle de formulaire qui permet aux utilisateurs de recueillir des informations essentielles pour créer des profils personnalisés.</p>
+</ol>
+    </body>
+</html>
