@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Site scolaire</title>
+<style>
+    a:hover{
+        background: pink;
+    }
+    a:active{
+    color:white;
+    text-decoration: underline; 
+  }
+  
+  a::after {
+  content: ''; /* Obligatoire pour que le pseudo-élément soit affiché */
+  position: absolute;
+  bottom: 0; /* Positionne la ligne sous le texte */
+  left: 0;
+  right: 0;
+  height: 10px; /* Épaisseur de la ligne */
+  background-color: yellow; /* Couleur de la ligne */
+  transform: scaleX(0); /* Cache la ligne initialement */
+  transform-origin: left; /* Ancrage de l'animation à gauche */
+  transition: transform 0.3s ease-in-out; /* Durée et effet de l'animation */
+}
+</style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#">Accueil</a>
+            <a href="#">Services</a>
+            <a href="#">Departement</a>
+            <a href="#">Administration</a>
+        </header>
+
+    </body>
+</html>

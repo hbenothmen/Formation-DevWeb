@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head><title>rev-ex1-css</title>
+    <style>
+
+      div p{
+        color:orange;
+      } 
+      /*  div > p{
+        color:rgb(149, 0, 255);
+      }   */
+          div + p{
+        color:green;
+      } 
+       h1 + p{
+        color:blue;
+      } 
+      input[type="text"]{
+        border: 5px solid red;
+        background-color:blueviolet;
+        color:aliceblue;
+      }
+      input[type="password"]{
+        border: 5px dashed green;
+        background-color:burlywood;
+        color:aliceblue;
+      }
+              *{
+        background-color:bisque ;
+    color:blue;}
+      a[href]{color:aqua;}
+      h2{color:red !important;}
+      #id1{color:blue;}
+      .class1{color:green;}
+      
+              
+    </style>
+    </head>
+    <body>
+        <h1>mes exemples</h1>
+        <p>Exemple1</p>
+        <div>
+        <p>Exemple1</p>
+        <p>Exemple2</p>
+        </div>
+        <p>example 3</p>
+        <p>example 3</p>
+
+        <input type="text">
+<input type="password">
+<a href="contact.html" title="Contact">Contactez-nous</a>
+
+<h2 class="class1" id="id1" >entrez votre email</h2>
+    </body>
+</html>

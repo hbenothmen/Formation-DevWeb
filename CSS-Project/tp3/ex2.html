@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ecole en ligne
+        </title>
+        <style>
+            input:focus{
+                border:4px solid blue;
+            }
+            button:hover{
+                background-color: pink;
+            }
+            button:disabled{
+                background-color:green;
+                color:aliceblue;
+            }
+            form:invalid {
+                 border: 2px solid red; }
+        </style>
+    </head>
+    <body>
+        <form>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="entrer votre nom d'utilisateur">
+        <br>
+        <br> 
+          <label>Password</label>
+        <input type="password" name="password" placeholder="entrer votre mot de passe">
+        <br>
+        <br>
+        <label>Authentication</label>
+         <input type="number" name="id" placeholder="entrer votre code">
+        <br>
+        <br>
+        
+         <button>Envoyer</button>
+        <!--  <button disabled>OK</button> -->
+          </form>
+    </body>
+</html>
