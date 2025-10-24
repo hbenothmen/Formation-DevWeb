@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+.position{
+    width:200px;
+    height: 100px;
+    background-color: blue;}
+
+   /* relative change la position par rapport a sa position initial  */
+    #div2{
+        position:relative;
+        top:12px;
+        left:40px;
+background-color: red;}
+
+/* absolute change la position par rapport a son parent (dans notre cas il ya un div parent de couleur noir) et dans le cas ou il est dans body la positionnement sera pa rapport a la page  */
+ #div3{
+        position:absolute;
+        top:12px;
+        left:40px;
+background-color: greenyellow;}
+
+    #divparent{
+        position:relative;
+             top:12px;
+        left:40px;
+        width:800px;
+    height: 800px;
+    background-color:black;
+    }
+    #div1{
+        position:fixed;
+             bottom:50px;
+        left:0px;
+
+    background-color:yellow;
+    }
+     #div4{
+        position:sticky;
+             bottom:0px;
+       right:0px;
+
+    background-color:pink;
+    }
+    
+        </style>
+    </head>
+    <body>
+        <div class="position" id="divparent">
+ <div class="position" id="div1">D1</div>
+ <br>
+ <div class="position" id="div2">D2</div>
+ <br>
+ <div class="position" id="div3">D3</div>
+ <br>
+ <div class="position" id="div4">D4</div></div>
+    </body>
+</html>

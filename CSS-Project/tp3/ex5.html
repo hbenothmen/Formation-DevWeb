@@ -11,18 +11,10 @@
     text-decoration: underline; 
   }
   
-  a::after {
-  content: ''; /* Obligatoire pour que le pseudo-élément soit affiché */
-  position: absolute;
-  bottom: 0; /* Positionne la ligne sous le texte */
-  left: 0;
-  right: 0;
-  height: 10px; /* Épaisseur de la ligne */
-  background-color: yellow; /* Couleur de la ligne */
-  transform: scaleX(0); /* Cache la ligne initialement */
-  transform-origin: left; /* Ancrage de l'animation à gauche */
-  transition: transform 0.3s ease-in-out; /* Durée et effet de l'animation */
+ a:hover::after {
+  transform: scaleX(1); /* Déplie la ligne à sa largeur totale */
 }
+ 
 </style>
     </head>
     <body>
