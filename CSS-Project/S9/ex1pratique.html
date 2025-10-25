@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<!-- saved from url=(0061)file:///C:/Users/benot/devweb/CSS-Project/S9/ex1pratique.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>
 
         </title>
@@ -11,22 +11,114 @@
             }
 :root{
     --first-color:#D90291;
-    --font-first:"Arial, Helvetica, sans-serif"
-
+    --font-first: "Arial, Helvetica, sans-serif";
+    --font-second: "Impact";
+    --tt: uppercase;
+   
 
 }
 h1{
     color:var(--first-color);
+    font-family: var(--font-second);
+    text-transform: var(--tt);
+}
+p{
+    /* display:block; */
+    line-height:2;
+    /* margin-block-start: 20px; */
+    text-align: justify;
+}
+p::first-letter{
+    font-size:25px;
+}
+#maindiv{
+    border: 1px solid blue;
+}
+h4{
     font-family: var(--font-first);
+}
+button{
+    background-color: var(--first-color);
+    border: none;
+    border-radius: 5px 5px;
+    height: 24px;
+    width: 204px;
+     text-align: center;
+     font-family: var(--font-first);
+     font-size: 18px;
+     font-weight:bold;
+     
+}
+#tarea{
+    border:1px solid var(--first-color);
+}
+#div3{
+margin-right: 2%;
+}
+.divparent{
+    display:flex;
+
+}
+#div4{
+    margin-right:84px;
 }
         </style>
     </head>
     <body>
-       <div id="maindiv" ></div>
-      <h1> Le Monde</h1> 
+        <h1> La Vie</h1> 
+       <div id="maindiv"></div>
+      
+<div id="div1">
+      <p>La vie est un voyage rempli d’expériences,
+         d’apprentissages et de moments précieux.
+          Aussi, les citations sur la vie peuvent 
+          nous inspirer, nous guider, mais aussi
+           nous motiver à avancer.
 
-      <p></p>
-      <p></p>
+   Que ce soit pour surmonter des épreuves,
+   célébrer des moments joyeux ou simplement
+    réfléchir à notre existence, ces mots
+     peuvent nous apporter réconfort et sagesse.</p></div>
+     <div id="div2">
+      <p>
+        Citation sur la vie : nos meilleurs exemples
+La vie est une aventure remplie de hauts et de bas,
+ et parfois, des mots simples peuvent nous aider
+  à naviguer à travers toutes les épreuves
+   qu’elle nous donne à affronter.
+
+Une citation touchante sur la vie nous offre
+ des perspectives uniques et vient nous rappeler
+  des vérités universelles : qu’il s’agisse de réflexion
+   sur l’amour, le bonheur ou les défis personnels de chacun,
+    ces phrases peuvent servir de boussoles dans notre quotidien.
+
+Que vous cherchiez à réconforter un ami ou à trouver votre propre
+ inspiration, ces citations vous parleront à coup sûr !
+      </p></div>
+      
+      <div class="divparent">
+      <div id="div4">
+        <p>Exemple de citation sur la vie positive
+« La vie est ce qui arrive pendant que
+ vous êtes occupé à faire d’autres projets. »
+(John Lennon)</p>
+
+<p>Explication :
+Cette citation souligne l’importance de vivre
+ dans le moment présent et de ne pas se laisser
+  submerger par les préoccupations futures,
+   rappelant que chaque instant compte.</p>
+
+
       </div>
-    </body>
-</html>
+     <div id="div3">
+        <h5>Ecrire une nouvelle citation ci-dessous</h5>
+        <textarea id="tarea" rows="8" cols="25"></textarea>
+        <br>
+        <button>Envoyer</button>
+     </div>
+    </div>
+      
+    
+</body></html>
