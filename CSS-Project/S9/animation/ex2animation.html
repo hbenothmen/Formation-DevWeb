@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation</title>
+        <style>
+/* 
+@keyframes noAnimation{
+    0%{color:red;
+    background-color: black;
+    font-family:'Courier New', Courier, monospace;}
+    20%{
+        color:black;
+    background-color: red;
+    font-family:'Times New Roman', Times, serif;
+    }
+     25%{
+        color:yellow;
+    background-color: tomato;
+    font-family:'Times New Roman', Times, serif;
+    }
+    50%{
+        color:black;
+    background-color: rgb(255,50,25);
+    font-family:Impact, haettenschweiler, 'arial Narrow bold';
+    }
+    75% {color: blue;
+        background-color: yellow;
+        font-family:verdana, geneva, tahoma, sans-serif;}
+     100% {color: pink;}
+} */
+/* @keyframes movement{
+    0%{
+        bottom: 30px;
+        color:blue
+    }
+    100%{
+      top:  10px;
+      color:red;
+    }
+} */
+/*  @keyframes movesmooth {
+    0%, 25%{
+         transform:scale(1); 
+         transform:translateY(200px); 
+         transform:translateX(200px);
+        color:blue;
+    }
+    100%{
+       transform:scale(1.5); 
+        transform:translateY(100px); 
+        transform:translateX(200px);
+        color:red;  
+    }
+    
+} */ 
+/* @keyframes zoom {
+    from{transform:scale(1);
+    color:gold;}
+    to{
+      transform:scale(1.5);
+    color:silver;  
+    }
+    
+} */
+ @keyframes glowtext{
+    0%{color:yellow;
+    text-shadow: -20px 20px 15px red;} 
+    100%{color:blue;
+    text-shadow: 40px 40px 15px black;}  
+ }
+/* h1{
+    animation:noAnimation 2s ease infinite alternate;
+} */
+/* h1{
+    position: relative;
+    animation:movement 2s ease-in-out infinite alternate;
+} */
+/* h1{
+      
+    animation:movesmooth 2s ease-in-out infinite alternate;
+} */
+ /* h1{
+    animation:zoom 2s ease-in infinite;
+    position:relative;
+    left: 400px;
+ } */
+ h1{
+    animation:glowtext 4s ease-in-out 1s infinite alternate;
+    position:relative;
+    left: 400px;
+ }
+        </style>
+    </head>
+    <body>
+<h1>Hello World</h1>
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+    </body>
+</html>
