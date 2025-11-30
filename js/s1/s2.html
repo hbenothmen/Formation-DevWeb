@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>s2 functions java script</title>
+    <!-- <script src="s1.js"></script> -->
+    </head>
+    <body>
+        <script>
+            //declaration classique
+            function f1(){
+                console.log("f1");
+            }
+f1();
+//return value
+function f2(){
+    return 4;
+}
+let x=f2()+6;
+console.log("x:",x);
+console.log(f2());
+//fonction avec portee globale
+let y=4;
+function f4(){
+    console.log("y:",y);
+}
+f4();
+//fonction avec portee locale
+function f5(){
+    let z=8;
+    console.log("z:",z);
+}
+let z=400;
+console.log("z:",z);
+f5();
+ console.log("z:",z);
+ //closure
+ function ma(){
+    let nom="test";
+ 
+ function mb(){
+    console.log(nom);
+ }
+ return mb;
+ }
+ const constant=ma();
+ constant();
+ //closure avec crementation
+ function compteur(){
+    let count=0;
+    return function(){
+        count++;//count=count+1
+        console.log(count);
+
+    }
+ }
+ const c=compteur();
+ c();
+ //c();
+ //compteur()();
+ //tableau-Array
+ let tab=[1,2,3,4,5];
+ let doubles=tab.map(n=>n*2);
+ console.log(doubles);
+ //tableau d'objets
+ let personnes=[
+    {nom:"Alice",age:25},
+    {nom:"Bob",age:24}
+ ];
+ let noms=personnes.map(p=>p.nom);
+ console.log(noms);
+
+            </script>
+            </body>
+            </html>
