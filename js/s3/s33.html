@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function seance 3</title>
+    </head>
+    <body>
+        <h1 id="titre1" >seance 3 java script</h1>
+        <ul id="fruitlist">
+    <li class="item">pomme</li>
+    <li class="item">banane</li>
+    <li class="item">orange</li>
+    </ul>
+    <button id="btn">ok</button>
+        <script>
+          //dom change couleur
+          document.getElementById("titre1").style.color="red"; 
+//ajouter item dans la liste
+document.getElementById("fruitlist").innerHTML+="<li class='item'>kiwi</li><li class='item'>mangue</li>";
+  let btn=document.getElementById("btn") ;
+  btn.addEventListener("click",function(){
+    alert("hi");
+  })    
+       </script>
+
+       
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM JS</title>
+    </head>
+    <body>
+      <h1>validation de formulaire</h1> 
+      <form id="form">
+        <!-- <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" required>
+<br>
+        <label for="age">age</label>
+<input type="number" id="age" name="age" required> -->
+
+<label for="email">Enter email address</label>
+<input id="email" type="text">
+<button onclick="ValidateEmail()">OK</button>
+<p id="err"></p>
+<p id="err1"></p>
+</form> 
+    </body>
+    <script>
+    /* function validation(){
+
+    } */
+   function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+     
+    </script>
+</html>

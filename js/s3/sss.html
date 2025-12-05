@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+             //tableau d'objets
+             let personnes=[{nom:"Alice",age:25},
+                {nom:"Bob",age:30}
+             ];
+             let noms=personnes.map(p=>p.age);
+             console.log(noms);
+             //ajouter supprimer et modifierelements
+             let ages=[8,9,10,11,12,13];
+             console.log("ages:",ages);
+             ages.push(15);//ajouter un element a la fin
+             console.log("new ages:",ages);
+             ages.unshift(7);//ajouter un element au debut du tableau
+             console.log("new ages:",ages);
+             ages.splice(1,2,20);//ajouter un element au debut du tableau
+             console.log("new ages:",ages);
+             //supprimer element
+             ages.pop();//supprimer le dernier element
+              console.log("new ages:",ages);
+              ages.shift();//supprimer le premier element
+              console.log("new ages:",ages);
+              /* ages.splice(0,4);
+              console.log("new ages after splice:",ages);
+        */
+       let numbers=ages.filter(a=> a>18);
+       console.log("numbers>18:",numbers);
+       //modifier
+       console.log("ages before modification:",ages);
+       ages[3]=33;
+       console.log("ages after modification:",ages);
+       ages.splice(1,1,50);
+       console.log("ages after splice modification:",ages);
+       let index=ages.indexOf(33);//trouver l index d un element
+       ages[index]=35;//modifier l element trouve
+       console.log("ages after index modification:",ages);
+       //find
+       let found=ages.find(a=>a>30);
+       console.log("first age>30:",found);
+       //reduce
+       let sum=ages.reduce((x,y)=>x+y);
+       console.log("sum of ages:",sum);
+       let student={
+        nom:"mariem",
+        age:22,
+        parler(){
+            console.log("bonjour",this.nom);}
+       }
+       //appeler une methode d'un objet
+       student.parler();
+       //ajouter un attribut d'un objet
+       student.addresse="tunis";
+       console.log("student",student);
+       //modification d'un attribut
+       student.age=23;
+       console.log("student after age modification",student);
+       //supprimer d'attribut 
+       delete student.age;
+       console.log("student aftersupprimer age ",student);
+
+       </script>
+       
+    </body>
+</html>
