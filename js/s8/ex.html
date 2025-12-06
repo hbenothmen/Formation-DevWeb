@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+<h1>local storage</h1>
+<label for="nom">Nom</label>
+<input type="text" id="nom">
+<input type="number" id="age">
+<button onclick="save()">save me</button>
+<button onclick="supprimer()">remove me</button>
+<button onclick="clearall()">clearall</button>
+    </body>
+    <script>
+        console.log(sessionStorage.getItem("nom"));//affichage
+         console.log(sessionStorage.getItem("age"));//affichage 
+      function save(){
+        const nom=document.getElementById("nom").value;
+        const age=document.getElementById("age").value;
+        if(nom=='' && age==''){
+            let h1=document.createElement("h1");
+            const text=document.createTextNode("vous devez donner votre nom et votre age");
+            h1.appendChild(text);
+            h1.style.color="red";
+            document.body.appendChild(h1);
+
+        }
+        else{
+            sessionStorage.setItem("nom",nom);//enregistrer
+            sessionStorage.setItem("age",age);//enregistrer
+            let h1=document.createElement("h1");
+            const text=document.createTextNode("vous avez enregistrer votre nom"+nom+"et votre age"+" "+age);
+            h1.appendChild(text);
+            h1.style.color="green";
+            document.body.appendChild(h1);
+        }
+      }
+      //remove
+      function supprimer(){
+        if(sessionStorage.getItem("nom")){
+            sessionStorage.removeItem("nom");
+            let h2=document.createElement("h2");
+            const text=document.createTextNode("Vous avez supprimer votre nom");
+            h2.appendChild(text);
+            h2.style.color="#F87C63";
+            document.body.appendChild(h2);
+
+        }
+        else{
+            let h2=document.createElement("h2");
+            const text=document.createTextNode("Vous n'avez pas enregistrer votre nom");
+            h2.appendChild(text);
+            h2.style.color="#63F866";
+            document.body.appendChild(h2);
+        }
+      }
+      //clear all
+      function clearall(){
+        sessionStorage.clear();
+      }
+</script>
+</html>

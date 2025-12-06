@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>seance7 tp</title>
+</head>
+<body>
+    <form id="form">
+<input type="text" id="prenom" placeholder="donnez moi votre nom">
+<button  onclick="f1()">submit</button>
+</form>
+<div id="div1">
+
+</div>
+</body>
+<script>
+ function f1(){
+    const form=document.getElementById('form');
+       form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        const p=document.createElement("P");
+        const nom=document.getElementById("prenom").value;
+        const text=document.createTextNode("bonjour"+" "+nom);
+        p.appendChild(text);
+        const div=document.getElementById("div1");
+        div.appendChild(p);
+       }
+    )
+}
+</script>
+</html>
