@@ -8,16 +8,17 @@
 
     </head>
     <body>
+       
         <div class="bg-dark text-light d-flex justify-content-center align-items-center vh-100">
             <!-- <h1 >Calculatrice</h1> -->
             
-            <div class="row g-2 p-6">
-                 <div class=col-9>
-            <input type="text" id="input1" class="form-control mb-3 text-end fs-6" disabled> 
+            <div class="row g-2 p-2 bg-secondary" style="width: 300px; height: 500px;" >
+                 <div class=col-12>
+            <input type="text" id="result" class="form-control mb-3 text-end fs-6" disabled> 
             </div>
-            <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="C">C</button></div> 
+            <!-- <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="C">C</button></div> --> 
             <!--  -->    
-            <div class="col-9"><button class="btn btn-light w-100 btn-calc" data-value="effacer">Effacer Tout</button></div>
+            <div class="col-9"><button class="btn btn-light w-100 btn-calc" id="clear" data-value="effacer">Effacer Tout</button></div>
                 <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="/">/</button></div>  
             <!--  -->
                 <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="7">7</button></div>
@@ -36,13 +37,13 @@
                 <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="3">3</button></div>
                 <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="+">+</button></div>
             <!--  -->
-             <div class="col-9"><button class="btn btn-light w-100 btn-calc" data-value="0">0</button></div>
-                <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="=">=</button></div>    
+             <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="0">0</button></div>
+             <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value=".">.</button></div>
+             <div class="col-3"><button class="btn btn-light w-100 btn-calc" data-value="%">%</button></div>
+                <div class="col-3"><button class="btn btn-light w-100 btn-calc" id="equal" data-value="=">=</button></div>    
             </div> 
         </div>
-
+<script src="script.js"></script>
     </body>
-    <script>
-
-    </script>
+     
 </html>
