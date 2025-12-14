@@ -24,7 +24,7 @@ clearbtn.addEventListener("click",()=>{
 /* <------------------------ > */
 //calculate
 equalbtn.onclick=()=>{
-    let last=eval(resultat);//eval pour calculer
+    let last=eval(resultat);
      result.value=last; 
 resultat=last;
     };
