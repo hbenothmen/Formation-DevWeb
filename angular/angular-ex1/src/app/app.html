@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="left">
+    <h2>Informations personnelles</h2>
+
+    
+    <label>First Name:</label>
+    <input [(ngModel)]="fname" placeholder="write your name">
+    <br>
+    <br>
+    <label>Last Name:</label>
+    <input [(ngModel)]="lname" placeholder="write your name">
+    <br>
+    <br>
+    <label>E-mail:  </label>
+    <input [(ngModel)]="email" placeholder="enter your email">
+    <br>
+    <br>
+    <label>Mobile:  </label>
+    <input [(ngModel)]="phone" aria-placeholder="enter your phone number">
+  </div>
+
+  <div class="right">
+    <h2>Carte visite</h2>
+    <div class="card">
+    <p>First Name:{{fname}}</p>
+    <p>Last name:{{lname}}</p>
+    <p>Email:{{email}}</p>
+    <p>Phone:{{phone}}</p>
+    
+    <img [src]="imageUrl" alt="profile" width="50" height="50">
+</div>
+  </div>
+</div>
