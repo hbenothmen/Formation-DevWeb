@@ -1,0 +1,40 @@
+
+<h2 class="section-title">New-movies </h2>
+<div class="s">
+    @for(film of films; track film.id){
+        @if(film.year==2026){
+            <section >
+            <a [routerLink]="['/moviedetails',film.id]">
+<div class="card">
+    <img [src]="film.image" alt="{{film.title}}" height="300" witdh="200">
+</div>
+<div class="card-body" style="text-align:center;">
+    <h2>{{film.title}}</h2>
+</div>
+
+            </a>
+            </section>
+
+        }}
+
+        </div>
+        <h2 class="section-title">Old-movies </h2>
+        <div class="s">
+        @for(film of films; track film.id){
+        @if(film.year!==2026){
+        
+            <section  class="s">
+             <a [routerLink]="['/movie-card',film.id]">
+<div class="card">
+    <img [src]="film.image" alt="{{film.title}}" height="300" width="200">
+</div>
+<div class="card-body" style="text-align: center;">
+    <h2>{{film.title}}</h2>
+</div>
+
+            </a>   
+            </section>
+        }
+    }
+</div>
+<router-outlet/>

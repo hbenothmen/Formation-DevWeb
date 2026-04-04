@@ -1,0 +1,30 @@
+<div class="container" >
+  <div [style.background-image]="'url('+imageUrl+')'" class="back-div">
+   
+   </div>
+
+<div class="card">
+<input 
+      type="text" 
+      placeholder="Rechercher un film..." 
+      (input)="updateSearch($event)" 
+    />
+
+    <ul>
+      
+
+      @for (movie of filteredMovies(); track movie.id) {
+        <li>{{ movie.title }} ({{ movie.year }})</li>
+      }
+     @empty {
+      @if(searchTerm () === '') {
+         <p>Veuillez saisir un terme de recherche</p>
+         }
+      @else{
+         <li>Aucun film trouvé.</li> 
+         }
+        }
+    </ul>
+  </div>
+</div>
+<router-outlet/>
