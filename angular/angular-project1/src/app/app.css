@@ -21,10 +21,12 @@ a {
   transition: background-color 0.5s;
   width: 70px;
   text-align: center;
+  font-weight: bold;
 }
 
 a:hover {
   background-color: rgb(66, 27, 238);
+  
 }
 .logo{
     font-style: oblique;
@@ -48,4 +50,11 @@ a:hover {
     background-color:gainsboro  ;
     align-items: center;
     padding-right: 50px;  
+}
+.welcome{
+    font-style: oblique;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size:medium;
+   font-weight: bold;
+color:rgb(178, 29, 29)";
 }

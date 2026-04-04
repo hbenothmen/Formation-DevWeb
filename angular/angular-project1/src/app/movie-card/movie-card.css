@@ -1,4 +1,7 @@
 .s{
-    display: flex;
-    gap:10px;
+    display:flex;
+    gap:15px;
+}
+.title{
+    text-decoration: none;
 }

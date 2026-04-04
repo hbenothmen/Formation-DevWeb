@@ -12,6 +12,6 @@
 }
 .container{
     display:flex;
-    /* background-color: gainsboro; */
+    background-color: gainsboro;
     height: 400px;
 }
