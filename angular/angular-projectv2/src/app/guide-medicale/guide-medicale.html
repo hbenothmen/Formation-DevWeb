@@ -1,0 +1,93 @@
+<!-- 
+<div class="container">
+  <h2>Médecins spécialistes</h2>
+
+  <div class="search-box">
+    <span class="label">Rechercher</span>
+
+    <div class="form-group">
+      <label>Spécialité :</label>
+      <select [(ngModel)]="selectedSpecialite">
+        <option value="">---</option>
+        @for(s of Pharmadoc; track s.id) {
+        <option  [value]="s">
+          {{ s.speciality}}
+        </option>
+    }
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Ville :</label>
+      <select [(ngModel)]="selectedVille">
+        <option value="">Toute la Tunisie</option>
+        @for(g of Pharmadoc; track g.id){
+        <option [value]="g">
+          {{ g.ville }}
+        </option>
+        }
+      </select>
+    </div>
+
+    <button (click)="rechercher()">Rechercher</button>
+  </div>
+</div> -->
+<div class="container">
+  <h2>Annuaire Santé</h2>
+
+  <div class="search-box">
+    <span class="label">Rechercher</span>
+
+    <div class="form-group">
+      <label>Spécialité :</label>
+      <select [(ngModel)]="selectedSpecialite">
+        <option value="">---</option>
+        @for (s of specialites; track s) {
+          <option [value]="s">{{ s }}</option>
+        } 
+      </select> 
+       
+    </div>
+
+    <div class="form-group">
+      <label>Ville :</label>
+      <select [(ngModel)]="selectedVille">
+        <option value="">Toute la Tunisie</option>
+        @for (g of villes; track g) {
+
+          <option [value]="g">{{ g }}</option>
+        }
+      </select>
+    </div>
+
+    <button class="button" (click)="rechercher()">Rechercher</button>
+  </div>
+
+  <!-- Résultats -->
+  <div class="results">
+    @if (filteredMedecins.length > 0) {
+      <div class="cards">
+        @for (m of filteredMedecins; track m.id) {
+          <div class="card">
+            <h3>{{ m.name }}</h3>
+            <p>{{ m.speciality }}</p>
+            <p>{{ m.ville }}</p>
+
+            <p 
+              [ngClass]="{ 'disponible': m.disponible==='true',
+              'occupe': m.disponible==='false'
+              }">
+              {{ m.disponible==='true' ? 'Disponible' : 'Occupé' }} 
+
+            </p>
+             <button class="btn" (click)="rendezvous(m)"> Prendre RDV</button>  
+          </div>
+        }
+      </div>
+    } @else {
+      <p class="no-result">Aucun médecin trouvé</p>
+    }
+  </div>
+</div>
+
+<router-outlet />

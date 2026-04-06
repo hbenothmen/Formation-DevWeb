@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes logo and links to opposite ends */
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+/* Remove default list styling */
+.link{
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Space between links */
+  font-size: large;
+}
+
+/* Link styling */
+.link a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.link a:hover {
+  color: #04AA6D; /* Highlight color */
+}
