@@ -1,0 +1,28 @@
+.container{
+    display:flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+   
+   background-color:rgb(240, 240, 228);
+}
+.card-body{
+    text-align: center;
+}
+.card{
+    display:flex;
+    
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    gap:10px;
+}
+.image{
+    width: 200px;
+    height: 300px;
+}
+.s{
+    background-color: rgb(221, 221, 205);
+    margin: 20px;
+    border-radius: 10px;
+}

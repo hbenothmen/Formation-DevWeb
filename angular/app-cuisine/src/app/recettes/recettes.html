@@ -1,0 +1,19 @@
+<h2 class="section-title" style="text-align: center;">Les recettes </h2>
+<div class="container">
+    @for(recette of allrecettes(); track recette.id){
+       <section class="s">
+            <a [routerLink]="['/details',recette.id]">
+       <div class="card" >
+
+ <img [src]="recette.image" alt="{{recette.titre}}"  class="image">
+</div>
+<div class="card-body" >
+    <h3 class="titre">{{recette.titre}}</h3>
+</div> </a>
+
+</section>     
+        }
+        
+        </div>
+
+ <router-outlet/>

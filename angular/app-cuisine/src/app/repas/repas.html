@@ -1,0 +1,36 @@
+<div class="title" style="text-align: center;">
+    <span class="s1">Chaque jour🫩:</span> 
+    <span class="s2">On mange quoi?</span>
+</div>
+
+<div class="calender">
+<ul class="days">
+     <li class="day">Monday</li>
+     <li class="day">Tuesday</li>
+     <li class="day">wednesday</li>
+     <li class="day">Thursday</li>
+     <li class="day">Friday</li>
+     <li class="day">Saturday</li>
+     <li class="day">Sunday</li>
+    @for (day of days; track day){
+        
+  <li  (click)="selectDay(day)">
+    {{ day }}
+ @if (meals[day]){
+    <div >
+      🍽️ {{ meals[day] }}
+    </div>}
+  </li>}
+</ul></div>
+@if (selectedDay) {
+  <div class="meal-box ms-3" >
+
+    <h4>Jour {{ selectedDay }}</h4>
+
+    <button type="button" class="btn btn-secondary ms-2" (click)="randomRepas()" >Coisir le repas du jour</button>
+
+   <button type="button" class="btn btn-secondary ms-3" (click)="updateCalender()">Update</button>
+
+  </div>
+}
+<router-outlet/>
