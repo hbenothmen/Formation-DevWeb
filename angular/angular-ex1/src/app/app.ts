@@ -13,8 +13,8 @@ export class App {
   lname:string="";
   email:string="";
   phone:number=0;
-/*imageUrl="https://static.vecteezy.com/system/resources/thumbnails/048/747/985/small/a-young-woman-with-long-brown-hair-is-wearing-a-black-blazer-and-white-shirt-looking-directly-at-the-camera-photo.jpg";
-  */
- imageUrl="C:\Users\benot\devweb\angular\angular-ex1\src\assets\images\profile.jpg";
+imageUrl="https://static.vecteezy.com/system/resources/thumbnails/048/747/985/small/a-young-woman-with-long-brown-hair-is-wearing-a-black-blazer-and-white-shirt-looking-directly-at-the-camera-photo.jpg";
+  
+ /*imageUrl="C:\Users\benot\devweb\angular\angular-ex1\src\assets\images\profile.jpg";*/
   protected readonly title = signal('angular-ex1');
 }
