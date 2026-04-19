@@ -1,0 +1,21 @@
+<div>
+<nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/pipecomponent">pipe</a>
+    <a routerLink="lifecycle">lifecycle</a>
+</nav>
+</div>
+<p>welcome</p>
+//c est le parent du child life cycle
+<h1>parent component</h1>
+<button (click)="increment()">increment</button>
+<button (click)="toggle()">toggle</button>
+
+@if (isvisible()) { 
+   <app-lifecycle [data]="mynumber"></app-lifecycle>
+ }
+@else {
+  <p>lifecycle component is hidden</p>
+}
+
+<router-outlet />

@@ -1,0 +1,9 @@
+<p>pipe-component works!</p>
+ <p>{{today | date:'MM/dd/yyyy'}}</p>
+ <p>{{price | currency:'$':'symbol':'1.2-2'}}</p>
+ <p>{{'hello world' | reverse}}</p>
+ <p>{{'angular' |uppercase }}</p>
+ <p>{{user.date | date:'fullDate'}}</p>
+ <p>{{user.name | lowercase }}</p>
+    <p>{{user.email | custom:"'":"'"}}</p>
+<router-outlet />
