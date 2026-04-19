@@ -1,0 +1,21 @@
+<!-- <p>products works!</p> -->
+<div class="center">
+<div class="container">
+    @for (product of products; track product.id){
+  <a [routerLink]="['/details', product.id]">
+     <div class="card">
+   
+    <img [src]="product.image" alt="{{product.name}}"  height="300" width="300" >
+    
+    <div class="card-body" style="text-align: center">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p class="price">{{ product.price }} $</p>
+      <button>Add to card</button>
+    </div>
+
+  </div></a>
+}
+</div>
+</div>
+<router-outlet/>

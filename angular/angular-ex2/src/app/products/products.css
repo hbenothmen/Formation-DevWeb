@@ -1,0 +1,19 @@
+.container{
+    margin-top: 20px;
+    display:flex;
+    /* flex-wrap: wrap; */ /* Permet de passer à la ligne */
+    gap: 20px; /*Espace de 20px entre les colonnes et lignes */
+     /* justify-content: space-between; Espace égal entre les cartes */
+     align-items: center;
+     justify-content: center;
+}
+.card{
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+   
+     height: 500px; 
+     width: 300px;
+     
+
+}

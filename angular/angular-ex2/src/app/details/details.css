@@ -1,0 +1,24 @@
+.products-container{
+    margin-top: 20px;
+    display:flex;
+    /* flex-wrap: wrap; */ /* Permet de passer à la ligne */
+    gap: 20px; /*Espace de 20px entre les colonnes et lignes */
+     /* justify-content: space-between; Espace égal entre les cartes */
+     align-items: center;
+     justify-content: center;
+}
+.card{
+    background-color:gainsboro;
+    /* width: 200;
+    height: 300; */
+}
+.price{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    color: blue;
+}
+.desc{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    color: black;
+}
