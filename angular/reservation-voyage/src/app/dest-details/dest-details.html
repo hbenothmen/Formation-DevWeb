@@ -1,0 +1,32 @@
+
+<p>Merci de Choisir cette destination</p>
+@if(details){
+
+<table class="table">
+    <thead class="table-light">
+<tr>
+        <th style=" color:blue">{{details.destination}}</th>
+        <th class="text-center align-middle">Budjet</th>
+        <th class="text-center align-middle">Pays</th>
+        <th></th>
+    </tr>
+    </thead>
+<tbody>
+   <tr >
+        <td><img [src]="[details.image]" 
+           alt="{{details.image}}" 
+           style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;" /></td>
+        <td class="text-center align-middle">{{details.prix}}</td>
+        <td class="text-center align-middle">{{details.pays}}</td>
+        <td class="text-center align-middle"><button class="btn btn-primary shadow-sm " (click)="reserver()" 
+  >Reserver</button></td> 
+        
+    </tr> 
+</tbody>
+</table> 
+}
+ 
+@else{
+    <p>Destination en cours de chargement....</p>
+} 
+<router-outlet/>

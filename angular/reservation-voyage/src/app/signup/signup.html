@@ -1,0 +1,25 @@
+
+<div style="width: 700px; border-radius: 10px; border: solid 1px rgba(179, 179, 182, 0.674); padding:20px; margin-left: 30px;" >
+<form #signupFrom="ngForm" (ngSubmit)="createUser(signupFrom)" >
+  <div class="form-group row mb-2">
+    <label for="nom" class="col-sm-2 col-form-label">Nom</label>
+    <div class="col-sm-10">
+    <input type="text" id="nom" name="nom" class="form-control" required ngModel>
+  </div>
+  </div>
+
+    <div class="form-group row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">E-mail</label>
+        <div class="col-sm-10">
+        <input type="email" id="email" name="email" class="form-control" required ngModel>
+    </div>
+      </div>
+<div class="form-group row mb-3">
+        <label for="password" class="col-sm-2 col-form-label">Mot de passe</label>
+        <div class="col-sm-10">
+        <input type="password" id="password" name="password" class="form-control" required ngModel>
+    </div>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Signup</button>
+</form>

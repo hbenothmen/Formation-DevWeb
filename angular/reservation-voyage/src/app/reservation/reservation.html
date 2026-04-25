@@ -1,0 +1,21 @@
+<p>reservation works!</p>
+
+<div>
+
+  <img [src]="voyage.image || 'assets/images/default.png'" width="250">
+
+  <h2>{{ voyage.destination || 'Chargement...' }}</h2>
+  <p>{{ voyage.pays || '' }}</p>
+  <p>{{ voyage.prix || '' }} €</p>
+
+  <p [ngClass]="voyage.disponible ? 'green' : 'red'">
+    {{ voyage.disponible ? 'Disponible' : 'Non disponible' }}
+  </p>
+
+  <button 
+    (click)="reserver()" 
+    [disabled]="!voyage.disponible">
+    Réserver
+  </button>
+
+</div>

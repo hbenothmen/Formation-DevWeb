@@ -1,0 +1,51 @@
+<div class="container " >
+<div class="search-container1">
+  <input
+    type="text"
+    [formControl]="searchControl" placeholder="Rechercher par pays" style="align-items: end;">
+  </div>
+  <div class="search-container1">
+    <input
+    type="number"
+    [formControl]="prixControl"
+    placeholder="Prix max" >
+
+  <div *ngFor="let v of voyages$ | async" class="card">
+    <h3>{{ v.pays }}</h3>
+    <p>{{ v.prix }} €</p>
+  </div>
+</div>
+</div>
+<!-- affichage des cartes de pays -->
+<div class="container-s" style="margin-top: 20px;">
+<h3 class="section-title" style="text-align: center;">Choisir Votre Destination✈️</h3>
+<div style="border: 1px solid #5b565676; border-radius:5px ; display: flex; flex-wrap: wrap; gap: 20px; padding: 10px; justify-content: center; margin-left: 10px; margin-right: 10px;">
+
+  @for (dest of destvoyage; track dest) {
+  
+    <div style="border: 1px solid black; width: 220px; text-align: center; padding: 10px; border-radius: 10px;">
+       <a [routerLink]="['/destdetails', dest.id]" style="text-decoration: none; text-align: center;"> 
+      <!--  image -->
+      <img [src]="[dest.image]" 
+           alt="{{dest.image}}" 
+           style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;" />
+</a>
+      <!--  titre -->
+      <h4>{{dest.destination}}</h4>
+      <app-destination-card [voyage]="dest" (addFavoris)="onAddFavoris($event)">
+    </app-destination-card>
+    </div>
+  }
+</div>
+</div>
+<!-- <div class="container">
+
+  @for (v of destvoyage; track v.id) {
+
+    <app-destination-card [voyage]="v" (addFavoris)="onAddFavoris($event)">
+    </app-destination-card>
+
+  }
+
+</div> -->
+
