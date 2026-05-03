@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
 export class Signup {
   private authServ=inject(AuthService);
   userList:any[]=[];
+ 
   createUser(form:NgForm){
 if(form.invalid) return;
 this.authServ.signup(form.value).subscribe({

@@ -11,15 +11,16 @@ import { SuprimerDestination } from './suprimer-destination/suprimer-destination
 import { ModifierUser } from './modifier-user/modifier-user';
 import { SupprimerUser } from './supprimer-user/supprimer-user';
 import { authGuard } from './services/auth.guard';
-import { Reservation } from './reservation/reservation';
+//import { Reservation } from './reservation/reservation';
 import { DestinationCard } from './destination-card/destination-card';
-
+import { IsAdmin } from './is-admin/is-admin';
+import { adminGuard } from './services/admin.guard';
 export const routes: Routes = [
     {path:'destination', component:Destinations},
     {path:'destdetails/:id', component:DestDetails},
     
-    {path:'administration', component:Admin },
-    
+    {path:'administration', component:Admin, canActivate:[adminGuard] },
+//{path:'administration', component:Admin},
     {path:'adddestination',component:AddDestination},
     {path: 'signup',component:Signup},
     {path: 'signin', component:Signin},
@@ -29,5 +30,6 @@ export const routes: Routes = [
     {path:'modifieruser', component:ModifierUser},
     {path: 'supprimeruser', component:SupprimerUser},
     {path: 'reservation/:id',component: DestDetails,canActivate: [authGuard]},
-{path:'destinationcard', component:DestinationCard}
+    {path:'destinationcard', component:DestinationCard},
+    {path:'isadmin', component:IsAdmin}
 ];

@@ -1,3 +1,5 @@
+
+
 import { Component, inject } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +10,6 @@ import { Router } from '@angular/router';
   templateUrl: './signin.html',
   styleUrl: './signin.css',
 })
-
 export class Signin {
   private service=inject(AuthService);
   private router=inject(Router);
@@ -29,3 +30,4 @@ this.service.signin(this.credentials).subscribe(allowed =>{
  
   }
 }
+

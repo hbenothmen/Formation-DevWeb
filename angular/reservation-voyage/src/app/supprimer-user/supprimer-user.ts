@@ -1,10 +1,10 @@
 import { Component,inject } from '@angular/core';
 import { DestinationService } from '../services/destination.service';
 import { NgForm,FormsModule } from '@angular/forms';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-supprimer-user',
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './supprimer-user.html',
   styleUrl: './supprimer-user.css',
 })

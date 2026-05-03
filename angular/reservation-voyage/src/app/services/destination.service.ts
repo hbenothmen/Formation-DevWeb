@@ -53,4 +53,12 @@ deleteUser(id:string):Observable<void>{
   addReservation(reservation: any) {
   return this.http.post("http://localhost:3000/reservations", reservation);
 }
+addFavorite(fav:any){
+    return this.http.post("http://localhost:3000/favorites",fav);
+}
+getFavoritesByUser(userId:string){
+    return this.http.get<any>(
+       `http://localhost:3000/favorites?userId=${userId}` 
+    );
+}
 }

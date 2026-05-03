@@ -6,7 +6,7 @@
       "pays": "Grèce",
       "prix": 850,
       "image": "assets/images/santorin.png",
-      "disponible": true
+      "disponible": false
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "pays": "Japon",
       "prix": 1200,
       "image": "assets/images/kyoto.png",
-      "disponible": true
+      "disponible": false
     },
     {
       "id": "3",
@@ -25,28 +25,52 @@
       "disponible": false
     },
     {
-      "destination": "Milano",
-      "pays": "Italy",
-      "prix": 1900,
-      "image": "assets/images/milano.png",
-      "disponible": false,
-      "id": "4"
-    },
-    {
       "id": "5",
       "destination": "Antalya",
       "pays": "Turkey",
       "prix": 1500,
       "image": "assets/images/antalia.png",
-      "disponible": true
+      "disponible": false
     },
     {
       "id": "6",
-      "destination": "Bizerte",
+      "destination": "kef",
       "pays": "Tunisie",
-      "prix": "1800",
+      "prix": "6000",
       "image": "assets/images/bizerte2.png",
-      "disponible": false
+      "disponible": true
+    },
+    {
+      "id": "8",
+      "destination": "Barcelone",
+      "pays": "Ispagne",
+      "prix": "2000",
+      "image": "assets/images/barcelone.png",
+      "disponible": true
+    },
+    {
+      "id": "9",
+      "destination": "MOUROUJ 6",
+      "pays": "Tunisia",
+      "prix": "6000",
+      "image": "assets/images/bizerte2.png",
+      "disponible": true
+    },
+    {
+      "id": "10",
+      "destination": "xxxxxxxx",
+      "pays": "yyyyyyyy",
+      "prix": "2000",
+      "image": "assets/images/paris.png",
+      "disponible": true
+    },
+    {
+      "id": "11",
+      "destination": "hgfd",
+      "pays": "hhhhhhh",
+      "prix": "1800",
+      "image": "assets/images/barcelona.png",
+      "disponible": true
     }
   ],
   "users": [
@@ -67,23 +91,96 @@
       "email": "amalaaa@yahoo.fr",
       "password": "123456",
       "id": "FNAPl3Haj6M"
+    },
+    {
+      "nom": "ahmad",
+      "email": "ahmad@gmail.com",
+      "password": "123456",
+      "id": "4Imd55v2r_s"
+    },
+    {
+      "id": "_jrAU8orEtQ"
+    },
+    {
+      "nom": null,
+      "email": null,
+      "password": null,
+      "id": "DbG5hadoajY"
+    },
+    {
+      "id": "GisUgLMiqW4"
+    },
+    {
+      "id": "YVqvx6Pt36Q"
+    },
+    {
+      "nom": null,
+      "email": null,
+      "password": null,
+      "id": "_tSp5M9qsAg"
     }
   ],
   "reservations": [
     {
-      "voyageId": "4",
+      "voyageId": null,
       "destination": "Milano",
       "prix": 1000,
       "date": "2026-04-24T22:21:25.741Z",
       "id": "MfVrgRpGrOw"
     },
     {
+      "voyageId": "2",
+      "destination": "Kyoto",
+      "prix": 1200,
+      "date": "2026-04-29T08:48:56.271Z",
+      "id": "0hceMJ1Vm8Y"
+    },
+    {
+      "voyageId": "1",
+      "destination": "Santorin",
+      "prix": 850,
+      "date": "2026-04-29T15:53:27.650Z",
+      "id": "s0JDUUee0dc"
+    },
+    {
       "voyageId": "3",
       "destination": "Paris",
       "prix": 1500,
-      "date": "2026-04-25T07:40:02.566Z",
-      "id": "a0eCsBiNljg"
+      "date": "2026-04-29T16:28:32.040Z",
+      "id": "QxR6lQhTb18"
+    },
+    {
+      "voyageId": "3",
+      "destination": "Paris",
+      "prix": 1500,
+      "date": "2026-04-29T17:46:26.899Z",
+      "id": "2Wu4CeLs738"
+    },
+    {
+      "voyageId": "5",
+      "destination": "Antalya",
+      "prix": 1500,
+      "date": "2026-04-29T18:04:12.317Z",
+      "id": "n6pw2RFucqo"
+    },
+    {
+      "voyageId": "3",
+      "destination": "Paris",
+      "prix": 1500,
+      "date": "2026-04-29T18:45:43.818Z",
+      "id": "yMIY1ga6k5I"
     }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "nom": "Hafiza",
+      "email": "hafiza@hotmail.fr",
+      "password": "hafiza1234"
+    }
+  ],
+  "favorites":[
+
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

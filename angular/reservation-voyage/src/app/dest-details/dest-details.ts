@@ -1,13 +1,13 @@
 import { Component,inject, OnInit } from '@angular/core';
 import { DestinationService } from '../services/destination.service';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-dest-details',
   standalone:true,
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './dest-details.html',
   styleUrl: './dest-details.css',
 })
@@ -21,10 +21,11 @@ details:any=null;
  ngOnInit(){
     return this.destService.readDest().subscribe((d:any[])=>{
     this.details=d.find((v:any) =>v.id==this.id);
-    console.log('destination trouvee:',this.details);
+    //console.log('destination trouvee:',this.details);
    }); 
   
 }
+//reservation
 reserver() {
    if (!this.auth.isOnline()) {
     alert("⚠️ Connectez-vous d'abord");

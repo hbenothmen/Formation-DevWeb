@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { combineLatest, debounceTime, startWith, switchMap, map } from 'rxjs';
 import { FormControl,ReactiveFormsModule } from '@angular/forms';
 import { DestinationCard } from '../destination-card/destination-card';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-destinations',
   standalone:true,
@@ -58,22 +59,35 @@ this.destvoyage=d;
     )
   )
 );
-favoris: any[] = [];
-
+//add favoris 
+//favoris: any[] = [];//declaration de la liste
+constructor(
+  private service:DestinationService,
+  private auth:AuthService 
+){}
 onAddFavoris(destvoyage: any) {
-
+const user=this.auth.currentUser();
+if(!user){
+  alert("Connecter-vous");
+  return;
+}}
+// const fav={
+//   userId:user.id,
+//   voyageId:destvoyage.id,
+//   destination:
+// }
   // éviter doublon
-  const exist = this.favoris.find(v => v.id === destvoyage.id);
+  // const exist = this.favoris.find(v => v.id === destvoyage.id);//find() parcourt le tableau favoris
+//si l'un des voyages déjà présents (v) possède le même ID que celui que tu essaies d'ajouter (destvoyage).
+  // if (!exist) {
+  //   this.favoris.push(destvoyage);
+  //   alert("❤️ Ajouté aux favoris");
+  // } else {
+  //   alert("⚠️ Déjà dans les favoris");
+  // }
 
-  if (!exist) {
-    this.favoris.push(destvoyage);
-    alert("❤️ Ajouté aux favoris");
-  } else {
-    alert("⚠️ Déjà dans les favoris");
-  }
+  // console.log("Favoris:", this.favoris);
+}
 
-  console.log("Favoris:", this.favoris);
-}
-}
 
 

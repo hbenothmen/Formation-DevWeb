@@ -30,7 +30,7 @@
   <div class="form-group row mt-2">
     <label for="inputImage" class="col-sm-2 col-form-label">Nom d'image </label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="image"  [(ngModel)]="destination.image" placeholder="assets/images/image.png">
+      <input type="file" class="form-control" name="image" accept="image/*" (change)="onFileSelected($event)" placeholder="assets/images/image.png">
     </div>
   </div>
   
@@ -44,8 +44,10 @@
 
       </select></div>
     </div>
-    <div class="d-grid gap-4  justify-content-md-end mt-4 ">
-      <button type="submit" class="btn btn-primary" [disabled]="updatedestForm.invalid" >Mettre à jour </button>
+   <br>
+     <div class="div-Button">
+    <button type="submit" class="btn btn-primary" [disabled]="updatedestForm.invalid" >Mettre à jour </button>
+    <button type="submit" class="btn btn-outline-primary" routerLink="/administration">Retour</button>
     </div>
 </form>
  

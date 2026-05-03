@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SupprimerUser } from './supprimer-user';
+import { IsAdmin } from './is-admin';
 
-
-describe('SupprimerUser', () => {
-  let component: SupprimerUser;
-  let fixture: ComponentFixture<SupprimerUser>;
+describe('IsAdmin', () => {
+  let component: IsAdmin;
+  let fixture: ComponentFixture<IsAdmin>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SupprimerUser],
+      imports: [IsAdmin],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SupprimerUser);
+    fixture = TestBed.createComponent(IsAdmin);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

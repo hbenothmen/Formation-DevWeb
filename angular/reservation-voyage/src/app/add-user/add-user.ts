@@ -1,10 +1,10 @@
 import { Component,inject } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import { DestinationService } from '../services/destination.service';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-add-user',
-  imports: [FormsModule],
+  imports: [FormsModule,RouterLink],
   templateUrl: './add-user.html',
   styleUrl: './add-user.css',
 })

@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SupprimerUser } from './supprimer-user';
+import { MesFavoris } from './mes-favoris';
 
-
-describe('SupprimerUser', () => {
-  let component: SupprimerUser;
-  let fixture: ComponentFixture<SupprimerUser>;
+describe('MesFavoris', () => {
+  let component: MesFavoris;
+  let fixture: ComponentFixture<MesFavoris>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SupprimerUser],
+      imports: [MesFavoris],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(SupprimerUser);
+    fixture = TestBed.createComponent(MesFavoris);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
