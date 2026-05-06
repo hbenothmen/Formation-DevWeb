@@ -1,0 +1,28 @@
+<p>ajout-produit works!</p>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div>
+    <label>Name</label>
+    <input formControlName="name" placeholder="name">
+    @if(productForm.get('name')?.invalid && productForm.get('name')?.touched){
+        <span style="color: red;">  minimum 3 caracteres</span>}
+    </div>
+    <div>
+    <label>Prix </label>
+    <input type="text" formControlName="price" placeholder="prix" >
+ @if(productForm.get('price')?.invalid && productForm.get('price')?.touched){
+    <span style="color: red;" > le prix doit etre superieure a 0</span>}
+</div>
+<div>
+    <label>Categorie </label>
+<select formControlName="category" >
+    <option value="electronique">Électronique</option>
+    <option value="mode">Mode</option>
+    <option value="maison">Maison</option>
+</select>
+@if(productForm.get('category')?.invalid && productForm.get('category')?.touched){
+    <span style="color: red;">  la categorie est obligatoire</span>}
+</div>
+<div>
+<button type="submit" [disabled]="productForm.invalid">Enregistrer</button>
+</div>
+</form>

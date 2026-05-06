@@ -1,0 +1,15 @@
+<p>counter-component works!</p>
+<button (click)="incrementation()">+</button>
+<p>conteur:{{count()}}</p>
+<button (click)="decrementation()">-</button>
+<p>conteur:{{count()}}</p>
+ @if(count()<0){
+    <p style="color:red ;">Attention : Valeur négative !</p>
+ }
+ <p>Le nombre est : {{parity()}}</p>
+ <!-- @if(count()%2==0){
+    <p>le nombre est pair</p>
+ }
+ @else {
+    <p>le nombre est impair</p>
+ } -->
