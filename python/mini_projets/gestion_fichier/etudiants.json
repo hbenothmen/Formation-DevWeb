@@ -1,0 +1,14 @@
+[
+    {
+        "nom": "ahmad",
+        "prenom": "samti",
+        "age": 23,
+        "moyenne": 15
+    },
+    {
+        "nom": "mariem",
+        "prenom": "afli",
+        "age": 26,
+        "moyenne": 17
+    }
+]

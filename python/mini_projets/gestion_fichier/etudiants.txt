@@ -1,0 +1,14 @@
+Etudiant1:
+nom:sara
+prenom:aouadi
+age:30
+moyenne:18
+Etudiant2:
+nom:aymen
+prenom:salhi
+age:20
+moyenne:19
+ nom:ahmad
+ prenom:masoudi
+ age:35
+ moyenne:15
