@@ -12,12 +12,12 @@ class RendezVous:
         self.rdv = datetime.strptime(self.date_rdv,"%d/%m/%Y")
         return  self.rdv
     def nombre_jours(self):
-       self.aujourdhuit = datetime.now()
-       self.diff_jour = self.rdv - self.aujourdhuit
+       self.aujourdhui = datetime.now()
+       self.diff_jour = self.rdv - self.aujourdhui
        return self.diff_jour.days
     
     def afficher(self):
-      print("la date du jour est: ", self.aujourdhuit)
+      print("la date du jour est: ", self.aujourdhui)
       print(f"Votre {titre} est le {date_rdv}")
       print(f" il vous reste {self.diff_jour.days} jours")
 
