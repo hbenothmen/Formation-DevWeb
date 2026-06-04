@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carnet de notes</title>
+    </head>
+    <body>
+        <div>
+        <form action="{{url_for('ajouter')}}" method="POST">
+         <input type="text" name="cours"  placeholder="Matière">
+        <input type="text" name="newnote" placeholder="Note">
+    <button type="submit">ajouter</button>
+    </form>
+    </div>
+    <hr>
+    <div>
+    <table class="tableau">
+        <tr>
+            <th>Note</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        {% for n in notes%}
+        <tr>
+           <td>{{n.matiere}}:{{n.note}}</td>
+        <td>
+            <form action="{{url_for('modifier', index=loop.index0)}}" method="GET">
+            <button type="submit">Modifier</button>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('supprimer', index=loop.index0)}}" method="POST">
+            <button type="submit">Supprimer</button>
+            </form>
+        </td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+<hr>
+<div>
+    <form action="{{url_for('rechercher')}}" method="POST">
+<input type="text" name="cours" >
+<button type="submit">Chercher</button>
+    </form>
+    {%if resultat %}
+    <p>{{resultat.matiere}}:{{resultat.note}}</p>
+    {%endif%}
+</div>
+    </body>
+</html>

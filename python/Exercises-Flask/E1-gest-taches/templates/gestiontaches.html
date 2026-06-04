@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajouter une tache</title>
+    </head>
+<style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f4f6f9;
+            padding:40px;
+        }
+
+        .container{
+            width:700px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+        }
+
+        input[type="text"]{
+            width:70%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        button{
+            padding:10px 15px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            color:white;
+            margin-left:5px;
+        }
+
+        .btn-ajouter{
+            background-color:#28a745;
+        }
+
+        .btn-ajouter:hover{
+            background-color:#218838;
+        }
+
+        .btn-terminer{
+            background-color:#007bff;
+        }
+
+        .btn-terminer:hover{
+            background-color:#0056b3;
+        }
+
+        .btn-supprimer{
+            background-color:#dc3545;
+        }
+
+        .btn-supprimer:hover{
+            background-color:#b02a37;
+        }
+
+        .btn-modifier{
+            background-color:#ffc107;
+            color:black;
+        }
+
+        .btn-modifier:hover{
+            background-color:#e0a800;
+        }
+
+        ul{
+            list-style:none;
+            padding:0;
+        }
+
+        li{
+            background:#f8f9fa;
+            margin:10px 0;
+            padding:15px;
+            border-radius:8px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .actions{
+            display:flex;
+            gap:5px;
+        }
+
+        .terminee{
+            color:green;
+            font-weight:bold;
+        }
+
+        .encours{
+            color:orange;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Gestion des tâches</h1>
+
+    <form action="{{ url_for('addtache') }}" method="POST">
+
+        <input type="text"
+               name="newtache"
+               placeholder="Entrer une tâche">
+
+        <button type="submit" class="btn-ajouter">
+            Ajouter
+        </button>
+
+    </form>
+
+    <hr>
+
+    <ul>
+
+        {% for tache in taches %}
+
+        <li>
+
+            <div>
+                <strong>{{ tache.titre }}</strong>
+                -
+
+                {% if tache.statut == "terminée" %}
+                    <span class="terminee">{{ tache.statut }}</span>
+                {% else %}
+                    <span class="encours">{{ tache.statut }}</span>
+                {% endif %}
+            </div>
+
+            <div class="actions">
+
+                <form action="{{ url_for('terminer', index=loop.index0) }}"
+                      method="POST">
+
+                    <button type="submit" class="btn-terminer">
+                        Terminer
+                    </button>
+
+                </form>
+
+                <form action="{{ url_for('modifier_tache', index=loop.index0) }}"
+                      method="GET">
+
+                    <button type="submit" class="btn-modifier">
+                        Modifier
+                    </button>
+
+                </form>
+
+                <form action="{{ url_for('supptache', index=loop.index0) }}"
+                      method="POST">
+
+                    <button type="submit" class="btn-supprimer">
+                        Supprimer
+                    </button>
+
+                </form>
+
+            </div>
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+    {
+        "matiere": "math",
+        "note": "12"
+    },
+    {
+        "matiere": "Pysique",
+        "note": "16"
+    },
+    {
+        "matiere": "Programming",
+        "note": 18.0
+    }
+]
