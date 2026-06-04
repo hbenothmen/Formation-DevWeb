@@ -7,6 +7,33 @@
         <button type="submit">Ajouter</button>
     </form>
     <hr>
+
+<h2>Rechercher</h2>
+
+<form action="{{ url_for('rechercher') }}" method="POST">
+
+    <input type="text"
+           name="motcle"
+           placeholder="Mot-clé">
+
+    <button type="submit">
+        Rechercher
+    </button>
+
+</form>
+
+{% if resultat %}
+
+<h3>Résultats :</h3>
+
+<ul>
+    {% for note in resultat %}
+        <li>{{ note.note }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+    <hr>
     {% for n in notes%}
     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;" >
         <p>{{n.note}}</p>

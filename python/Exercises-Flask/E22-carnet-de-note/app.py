@@ -36,5 +36,23 @@ def modifier_note(index):
       sauvegarder()
       return redirect(url_for("afficher_note"))
    return render_template("/modifier.html", index=index, note=notes[index], )
+@app.route("/rechercher", methods=["POST"])
+def rechercher():
+
+    mot = request.form["motcle"]
+
+    resultat = []
+
+    for n in notes:
+
+        if mot.lower() in n["note"].lower():
+            resultat.append(n)
+
+    return render_template(
+        "index.html",
+        notes=notes,
+        resultat=resultat
+    )
+
 if __name__ == "__main__":
     app.run (debug=True)
