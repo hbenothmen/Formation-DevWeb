@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Carnet de notes</title></head>
+<body>
+    <form action="{{url_for('ajouter')}}" method="POST">
+        <input type="text" name="newnote">
+        <button type="submit">Ajouter</button>
+    </form>
+    <hr>
+    {% for n in notes%}
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;" >
+        <p>{{n.note}}</p>
+        <form action="{{url_for('supprimer', index=loop.index0)}}" method="POST">
+            <button type="submit">Supprimer</button>
+        </form>
+        <form action="{{url_for('modifier_note', index=loop.index0)}}" method="GET">
+            <button type="submit">Modifier</button>
+        </form>
+    </div>
+    {%endfor%}
+</body>
+    </html>
