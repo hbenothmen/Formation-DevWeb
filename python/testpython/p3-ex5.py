@@ -3,8 +3,14 @@ class Etudiant:
       self.nom=nom
       self.prenom=prenom
       self.note=note
-def afficher(self):
-   return f"{self.nom} {self.prenom} a l'age {self.age}"
+    def afficher(self):
+      print (f"Nom: {self.nom} | Prenom:{self.prenom} | Note: {self.note}")
 
+    def est_admis(self):
+       if self.note >= 10:
+          return True
+       else:
+          return False
 e1=Etudiant("Ali","Ben Salah",14)
-print(e1.afficher())
+e1.afficher()
+print(e1.est_admis())
