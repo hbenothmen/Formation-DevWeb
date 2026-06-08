@@ -1,10 +1,60 @@
 <!DOCTYPE html>
+<head>
+    <title>Gestionnaire de contacts</title>
+    <style>
+        
+        .div1{
+            border-radius: 10px;
+           
+            padding: 20px;
+            margin: 100px;
+            background-color: #557cba14;
+        }
+       
+         .form1 {
+  border-radius: 5px;
+  background-color : #557CBA;
+  padding: 20px;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+        
+        
+        th { background-color : #557CBA; padding:0.7em; }
+		td { padding:0.5em; background-color : #acc1f5;}
+    </style>
+</head>
 <html>
     <head><title>Gestionnaire Contacts</title></head>
 <body>
-    <dev >
+    <div class="div1">
     <h3>Ajout</h3>
-        <form  style=" border-radius: 10px gray; " action="{{url_for('ajouter_contact')}}" method="POST">
+        <form  class="form1"  action="{{url_for('ajouter_contact')}}" method="POST">
       <label> Ajouter un nom:</label>
       <input type="text" name="nom" required>
       <br><br>
@@ -15,11 +65,50 @@
       <input type="text" name="tel" required>  
     <br><br>
       <button type="submit">Envoyer</button>
-    </form></dev>
-    <dev>
-        <form>
-            
-        </form>
-    </dev>
+    </form></div>
+    <div class="div1">
+    <h3>Liste des contacts</h3>
+    <table >
+        <thead>
+        <tr>
+            <th>NOM</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>
+            </th>
+            <th>
+            </th>
+        </thead></tr>
+        <tbody>
+    {% for c in contacts%}
+    
+    <tr>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.mobile}}</td>
+        <td>
+            <form action="{{url_for('modifier', index=loop.index0)}}" method="GET">
+                <button type="submit">Modifier</button>
+            </form>
+        </td>
+        <td>
+            <form action="{{url_for('supprimer', index=loop.index0)}}" method="POST">
+                <button type="submit">Supprimer</button>
+            </form>
+        </td>
+    </tr>
+
+    {%endfor%}
+    </tbody>
+    </table>
+    <div>
+    <h3>Chercher un contact</h3>
+    <form action="{{url_for('rechercher')}}" method="GET">
+    <input type="text" name="item" required>
+    <button type="submit">OK</button>
+    </form>
+    </div>
+</div>
+   
 </body>
     </html>

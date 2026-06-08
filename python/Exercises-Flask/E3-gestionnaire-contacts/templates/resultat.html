@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Resultat de la recherche</title>
+</head>
+<body>
+  <h3>Contacts</h3> 
+ 
+  <ul>
+     {%for r in resultat%} 
+    <li>Nom: {{r.name}}</li>
+    <li>Email: {{r.email}}</li>
+    <li>Telephone: {{r.phone}}</li>
+    {%endfor%}
+  </ul>
+</body>
+</html>

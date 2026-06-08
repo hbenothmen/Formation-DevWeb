@@ -28,6 +28,36 @@ def ajouter_contact():
   })
   save()
   return redirect(url_for("afficher"))
-
+@app.route("/supprimer/<int:index>", methods=["POST"])
+def supprimer(index):
+ if 0<= index <len(contacts):
+  contacts.pop(index)
+  save()
+  return redirect(url_for("afficher"))
+@app.route("/modifier/<int:index>", methods=["POST", "GET"])
+def modifier(index):  
+  if 0 <= index <len(contacts):
+     if request.method== "POST":
+        new_nom=request.form["newnom"]
+        contacts[index]['name']=new_nom
+        new_email=request.form["newmail"]
+        contacts[index]['email']=new_email
+        new_tel=request.form["newtel"]
+        contacts[index]['mobile']=new_tel
+        save()
+        return redirect(url_for("afficher"))
+  return render_template("modifier.html", index=index, contacts=contacts[index])
+@app.route("/rechercher", methods=["GET"])
+def rechercher():
+      resultat=[]
+      item=request.args.get("item","")
+      for c in contacts:
+         if item.lower()==(c["name"]).lower():
+           
+           resultat.append({"name":c["name"],
+                          "email":c["email"],
+                          "phone":c["mobile"]})
+          
+      return render_template ("resultat.html",  resultat=resultat)
 if __name__ == "__main__":
     app.run(debug=True)
