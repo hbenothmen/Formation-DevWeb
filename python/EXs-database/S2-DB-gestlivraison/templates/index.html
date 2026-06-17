@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Home</title>
+</head>
+<body>
+    <div>
+        <h3> Clients</h3>
+   <table border="1">
+    <th>Nom</th>
+    <th>Addresse</th>
+    <th>Telephone</th>
+{%for c in client%}
+<td>{{c[1]}}</td>
+<td>{{c[2]}}</td>
+<td>{{c[3]}}</td>
+{%endfor%}
+   </table> 
+   
+   </div>
+</body>
+</html>

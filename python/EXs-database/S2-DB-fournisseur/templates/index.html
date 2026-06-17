@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bonjour </title>
+</head>
+<body>
+    <h1>Bienvenue sur notre site de gestion de produits et fournisseurs</h1>
+    <ul>
+        <li><a href="/addp">Ajouter un produit</a></li>
+        <li><a href="/addf">Ajouter un fournisseur</a></li>
+    </ul>   
+    <h1>list des produits</h1>
+    <form method="POST" action="/">    
+        <input type="text" id="search" placeholder="Rechercher un produit d'un fournisseur" name="search">
+        <input type="submit" value="Rechercher">
+    </form>
+    <table border="1">
+        <tr>
+            <th>Nom du produit</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Fournisseur</th>
+            <th>action</th>
+        </tr>
+        {% for p in produits %}
+        <tr>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td>{{ p[4] }}</td>
+            <td><a href="/deletep/{{p[0]}}">Supprimer</a></td>
+            <td><a href="/modifyp/{{p[0]}}">Modification</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
