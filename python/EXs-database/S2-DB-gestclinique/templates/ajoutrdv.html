@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Ajouter un rendez-vous</title>
+</head>
+<body>
+   <form action="/ajoutrdv" method="POST">
+    <label for="rdvdate">Date du rendez-vous</label>
+    <input type="date" name="daterdv" ><br><br>
+    <label for="statut">Statut</label>
+    <select name="statut" >
+<option value="en en attente">en attente</option>
+<option value="confirmé">confirmé</option>
+<option value="terminé">terminé</option>
+    </select><br><br>
+    <label for="patient" >Ptient</label>
+    <select id="patient" name="idp" required>
+        {%for p in nomp%}
+        <option value="{{p[1]}}">{{p[0]}}</option>
+        {%endfor%}
+    </select><br><br>
+    <label for="medecin" >Medecin</label>
+    <select id="medecin" name="idm" required>
+        {%for m in nomm%}
+        <option value="{{m[1]}}">{{m[0]}}</option>
+        {%endfor%}
+    </select><br><br>
+    <button type="submit">Ajouter</button>
+   </form>
+</body>
+</html>

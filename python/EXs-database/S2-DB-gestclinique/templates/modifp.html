@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Ajout d'un patient</title>
+</head>
+<body>
+    <form  method="POST">
+        <label for="nom">Non du patient:</label>
+        <input type="text" name="nomp" value="{{patient[1]}}" required ><br><br>
+    <label for="Prenom">Prenon du patient:</label>
+        <input type="text" name="prenomp" value="{{patient[2]}}" required><br><br>
+     <label for="telephone">Telephone du patient:</label>
+        <input type="text" name="telp" value="{{patient[3]}}" required><br><br>
+    <label for="datenaissance">Date de naissance</label>
+    <input type="date" name="datenp" value="{{patient[4]}}"><br><br>
+<button type="submit">Enregistrer</button>
+</form>
+</body>
+</html>

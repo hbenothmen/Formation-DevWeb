@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resultat de recherche</title>
+</head>
+<body>
+ <h3>Rendez-vous</h3>
+   <ul>
+    {%if rdvpatients%}
+    {%for r in rdvpatients%}
+    <li>Nom:{{r[0]}}</li>
+    <li>Prenom:{{r[1]}}</li>
+    <li>Date rendez-vous:{{r[2]}}</li>
+    {%endfor%}
+    {%endif%}
+
+    {%if rdvmedecins%}
+    {%for r in rdvmedecins%}
+    <li>Nom:{{r[0]}}</li>
+    <li>Specialite:{{r[1]}}</li>
+    <li>Date rendez-vous:{{r[2]}}</li>
+    
+    {%endfor%}
+    <p><strong>Total des rendez-vous:{{total_rdv[0]}}</strong></p>
+    {%endif%}
+   </ul>
+</body>
+</html>

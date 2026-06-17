@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Clinique</title>
+    <style>
+      thead{
+        background-color: cadetblue;
+      }
+      tbody{
+        background-color:cornflowerblue;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/ajoutp">Ajouter un patient</a>
+        <a href="/ajoutm">Ajouter medecin</a>
+        <a href="/ajoutrdv">Ajouter rendez-vous</a>
+      </nav>
+    <hr>
+    <form method="POST", action="/recherche">
+      <input type="text" id="search" name="search" placeholder="Entrer le theme de recherche">
+      <input type="submit" value="Rechercher">
+    </form>
+    <hr>
+   <h2>Les informations des patients</h2>
+  <table>
+    <thead>
+<tr>
+  <th>Nom</th>
+  <th>Prenom</th>
+  <th>Telephone</th>
+  <th>Date de naissance</th>
+  
+  <th>Action</th>
+</tr></thead>
+<tbody>
+   {%for p in patients%}
+   <tr>
+  <td>{{p[1]}}</td>
+  <td>{{p[2]}}</td>
+  <td>{{p[3]}}</td>
+  <td>{{p[4]}}</td>
+  <td><a href="/deletep/{{p[0]}}">Supprimer</a>
+  <a href="/modifp/{{p[0]}}">Modifier</a></td>
+</tr>
+  {%endfor%}
+  </tbody>
+  </table>
+  <hr>
+  <h2>Les medecins</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Specialité</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for m in medecins%}
+      <tr>
+        <td>{{m[1]}}</td>
+        <td>{{m[2]}}</td>
+        <td><a href="/deletem/{{m[0]}}">Supprimer</a>
+        <a href="/modifm/{{m[0]}}">Modifier</a></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  <hr>
+  <h2> Liste des rendez-vous</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom Patient</th>
+        <th>Prenom Patient</th>
+        <th> Date Rendez-vous</th>
+        <th>Statut</th>
+        <th>Nom Medecin</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for r in rdv%}
+      <tr>
+        <td>{{r[1]}}</td>
+        <td>{{r[2]}}</td>
+        <td>{{r[3]}}</td>
+        <td>{{r[4]}}</td>
+        <td>{{r[5]}}</td>
+        <td><a href="/deleterdv/{{r[0]}}">Supprimer</a>
+          <a href="/modifrdv/{{r[0]}}">Modifier</a></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</body>
+</html>
